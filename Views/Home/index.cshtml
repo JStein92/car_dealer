@@ -1,0 +1,21 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <h1>Car Dealership</h1>
+    @if (Model != null)
+    {
+        <p> @foreach(var car in Model)
+        {
+                <ul>
+                    <li>Car make/Model: @car.GetMakeModel()</li>
+                    <li>Car mileage: @car.GetMileage()</li>
+                    <li>Car price: @car.GetPrice()</li>
+                </ul>
+        }
+
+        </p>
+    }
+        <p><a href="/form">Form Page</a></p>
+</div>
